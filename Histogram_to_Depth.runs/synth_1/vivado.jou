@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Dec  2 14:56:18 2020
+# Process ID: 3876
+# Current directory: C:/Users/u39jm15/Documents/Vivado_Projects/Histogram_to_Depth/Histogram_to_Depth.runs/synth_1
+# Command line: vivado.exe -log Histogram_to_Depth.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Histogram_to_Depth.tcl
+# Log file: C:/Users/u39jm15/Documents/Vivado_Projects/Histogram_to_Depth/Histogram_to_Depth.runs/synth_1/Histogram_to_Depth.vds
+# Journal file: C:/Users/u39jm15/Documents/Vivado_Projects/Histogram_to_Depth/Histogram_to_Depth.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Histogram_to_Depth.tcl -notrace
