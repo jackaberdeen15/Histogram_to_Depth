@@ -28,7 +28,7 @@ module simple_compare #(parameter bin_size=16, index_width=4)(
     output wire [index_width-1:0] max_bin_index
     );
     
-    reg [bin_size-1:0] max_value_buffer;
+    /*reg [bin_size-1:0] max_value_buffer;
     reg [index_width-1:0] max_index_buffer;
     
     always @(*) begin
@@ -43,6 +43,9 @@ module simple_compare #(parameter bin_size=16, index_width=4)(
     end
     
     assign max_bin_value=max_value_buffer;
-    assign max_bin_index=max_index_buffer;
+    assign max_bin_index=max_index_buffer;*/
+    
+    assign max_bin_value=(bin1_value>bin2_value)?bin1_value:bin2_value;
+    assign max_bin_index=(bin1_value>bin2_value)?bin1_index:bin2_index;
             
 endmodule

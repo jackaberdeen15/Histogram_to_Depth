@@ -66,9 +66,11 @@ module determine_depth #(parameter bin_size=16, count_width=24, histogram_width=
     
      
     div_gen_0 divide (
-      .aclk(clk),                                      // input wire aclk
+      .aclk(clk),   // input wire aclk
+      .s_axis_divisor_tready(denominator_tready),    // output wire s_axis_divisor_tready
       .s_axis_divisor_tvalid(tvalid),    // input wire s_axis_divisor_tvalid
       .s_axis_divisor_tdata(depth_bin_denominator_wire),      // input wire [23 : 0] s_axis_divisor_tdata
+      .s_axis_dividend_tready(numerator_tready),  // output wire s_axis_dividend_tready
       .s_axis_dividend_tvalid(tvalid),  // input wire s_axis_dividend_tvalid
       .s_axis_dividend_tdata(depth_bin_numerator_wire),    // input wire [23 : 0] s_axis_dividend_tdata
       .m_axis_dout_tvalid(output_valid),          // output wire m_axis_dout_tvalid

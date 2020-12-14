@@ -71,22 +71,22 @@ module testbench();
         
         #2000 histogram = {16'd15, 16'd10, 16'd23, 16'd190, 16'd56, 16'd2000, 16'd700, 16'd900, 16'd56, 16'd789, 16'd9900, 16'd16, 16'd415, 16'd158, 16'd165, 16'd175};
         //median = d973 or h3CD
-        //depth bin = 6
+        //depth bin = 6 or h03000000
         //first peak photon count = d8927 or h22df
         //second peak photon count = d1027 or h0403
         #2000 histogram = {16'd60, 16'd110, 16'd30, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0, 16'd54, 16'd82, 16'd102, 16'd63, 16'd27, 16'd0, 16'd0};
         //median = d33 or h21
-        //depth bin = 5.22
+        //depth bin = 5.22 or h02ae3380
         //first peak photon count = d104 or h0068
         //second peak photon count = d169 or h00a9
         #2000 histogram = {16'd28, 16'd126, 16'd300, 16'd89, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0, 16'd30, 16'd400, 16'd134, 16'd45, 16'd500};
         //median = d103 or h67
-        //depth bin = 1
+        //depth bin = 1 or h00928ac4
         //first peak photon count = d428 or h01ac
         //second peak photon count = d297 or h0129
         #2000 histogram = {16'd0, 16'd0, 16'd0, 16'd0, 16'd1700, 16'd1500, 16'd3600, 16'd2750, 16'd3240, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0, 16'd0};
         //median = 799 or h31F
-        //depth bin = 9.66
+        //depth bin = 9.66 or h04c0fb7d
         //first peak photon count = d8795 or h225b
         //second peak photon count = d0 or h0000
         #2000 $finish;

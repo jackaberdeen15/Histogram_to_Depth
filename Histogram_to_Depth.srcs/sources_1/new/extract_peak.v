@@ -30,7 +30,6 @@ module extract_peak #(parameter bin_width=16, count_width=24, histogram_width=16
     reg [range_width-1:0] tl,tr;
     reg [range_width-1:0] peak_width;
     reg [count_width-1:0] temp_photon_count;
-    reg [bin_width-1:0] depth_cm;
     reg [peak_bin_width*bin_width-1:0] temp_histogram;
     
     always @(posedge clk) begin

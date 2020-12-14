@@ -40,7 +40,7 @@ module median #(parameter bin_width=16, bin_num=16, histogram_width=bin_num*bin_
         +histogram[127:112]+histogram[143:128]+histogram[159:144]+histogram[175:160]+histogram[191:176]+histogram[207:192]+histogram[223:208]
         +histogram[239:224]+histogram[255:240];
         
-        hist_value=hist_value[23:0]/23'd16;
+        hist_value=hist_value[23:0]>>4;
     end 
     
     assign median=hist_value[bin_width-1:0]; 

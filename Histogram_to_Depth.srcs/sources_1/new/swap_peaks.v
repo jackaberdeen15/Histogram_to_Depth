@@ -39,16 +39,16 @@ module swap_peaks #(parameter bin_width=16, count_width=24, histogram_width=5*bi
     
     always @(posedge clk) begin
         if(second_peak_photon_count>first_peak_photon_count) begin
-            large_peak_buffer=second_peak_range;
-            small_peak_buffer=first_peak_range;
-            large_peak_histogram_buffer=second_peak_histogram;
-            small_peak_histogram_buffer=first_peak_histogram;
+            large_peak_buffer<=second_peak_range;
+            small_peak_buffer<=first_peak_range;
+            large_peak_histogram_buffer<=second_peak_histogram;
+            small_peak_histogram_buffer<=first_peak_histogram;
         end
         else begin
-            large_peak_buffer=first_peak_range;
-            small_peak_buffer=second_peak_range;
-            large_peak_histogram_buffer=first_peak_histogram;
-            small_peak_histogram_buffer=second_peak_histogram;
+            large_peak_buffer<=first_peak_range;
+            small_peak_buffer<=second_peak_range;
+            large_peak_histogram_buffer<=first_peak_histogram;
+            small_peak_histogram_buffer<=second_peak_histogram;
         end        
     end
     

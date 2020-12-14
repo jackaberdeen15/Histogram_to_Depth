@@ -39,18 +39,18 @@ module subtract_median #(parameter bin_width=16, bin_num=16, histogram_width=bin
     genvar i;
     //genvar overflow;
     generate
-        for(i=0;i<histogram_width;i=i+bin_width) begin: gen_sub_med
+        for(i=0;i<bin_width;i=i+1) begin: gen_sub_med
             c_addsub_0  hist_sub_ambient(
-              .A(in_hist[i +:bin_width]),          // input wire [15 : 0] A
+              .A(in_hist[i*bin_width +:bin_width]),          // input wire [15 : 0] A
               .B(median[bin_width-1:0]),          // input wire [15 : 0] B
               .CLK(clk),      // input wire CLK
-              .C_OUT(overflow[i/bin_width]),  // output wire C_OUT
-              .S(hist_buffer[i +:bin_width])          // output wire [15 : 0] S
+              .C_OUT(overflow[i]),  // output wire C_OUT
+              .S(hist_buffer[i*bin_width +:bin_width])          // output wire [15 : 0] S
             );
-            always @(hist_buffer[i +:bin_width]) begin
-        
-                if(in_hist[i +:bin_width]<median[bin_width-1:0]) out_hist_temp[i +:bin_width]=0;
-                else out_hist_temp[i +:bin_width]=hist_buffer[i +:bin_width];
+            //always @(hist_buffer[i*bin_width +:bin_width]) begin
+            always @(posedge clk) begin
+                if(in_hist[i*bin_width +:bin_width]<median[bin_width-1:0]) out_hist_temp[i*bin_width +:bin_width]=0;
+                else out_hist_temp[i*bin_width +:bin_width]=hist_buffer[i*bin_width +:bin_width];
         
             end
         end  
